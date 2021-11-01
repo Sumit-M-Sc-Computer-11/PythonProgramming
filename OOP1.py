@@ -1,44 +1,33 @@
-# public            no1
-# protected       _no2
-# private          __no3
-
-class Base:
-    def __init__(self):
-        self.no1 = 11           # public member
-        self._no2 = 21          # protected member
-        self.__no3 = 51         # private member
-
-    def fun(self):                  # public method
-        print(self.no1,self._no2,self.__no3)
+class Arithematic:                      # class definition aahe
+    value=111                       #class variable
+    
+    def __init__(self,i,j):             #Class Constructor
+        print("Inside Constructor")
+        self.no1=i                      #no1 charecteristic///Class instance variable
+        self.no2=j                      #no2 charecteristic aahe//Instance variable
         
-    def _fun(self):                  # protected method
-        print(self.no1,self._no2,self.__no3)
-            
-    def __fun(self):                  # private method
-        print(self.no1,self._no2,self.__no3)
-
-class Derived(Base):
-    def __init__(self):
-        Base.__init__(self)
+    def Add(self):                      #instance method
+        return self.no1+self.no2
         
-    def gun(self):
-        print(self.no1)
-        print(self._no2)
-        #print(self.__no3)          Not allowed
-        self.fun()
-        self._fun()
-        # self.__fun()                  Not allowed
+    def Sub(self):                        #instance method
+        return self.no1-self.no2
         
 def main():
-    bobj = Base()
-    #print(bobj.no1)
-    #print(bobj._no2)
-    #print(bobj.__no3)      Not allowed
-    #bobj.fun()
-    bobj._fun()
-    # bobj.__fun()              Not allowed
-    #dobj = Derived()
-    #dobj.gun()
+    print("class value is:",Arithematic.value)
+    obj1=Arithematic(21,11)          #Arithematic(obj) --> __init__(obj)//__init__(obj1,21,11)
+    obj2=Arithematic(101,51)            # __init__(obj1,101,51)
+        
+        
+    ret=obj1.Add()              #ret=Add(obj1)
+    print("Addition is",ret)    
+    ret=obj1.Sub()               #ret=Sub(obj1)
+    print("Subtraction is",ret)
     
-if __name__ == "__main__":
-    main()
+    
+    ret=obj2.Add()                   #ret=Sub(obj2)
+    print("Addition is",ret)
+    ret=obj2.Sub()                   #ret=Sub(obj2)
+    print("Subtraction is",ret)
+    
+if __name__== "__main__":
+    main() 

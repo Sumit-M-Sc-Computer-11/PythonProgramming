@@ -1,11 +1,13 @@
-# Demonstration of sequance
+def main():
 
-def fun():
-    print("First line of function")
-    print("Second line of function")
+    arr = (10,20,30,)
+    print("type of arra is ", type(arr))
     
-print("First line of application")
-fun()
-print("Last line of application")
+    brr = (10)
+    print("type of brr is ",type(brr))
+    
+    crr = (10,)
+    print("type of crr is ",type(crr))
 
-# 7 -> 8 -> 3 -> 4 -> 5 -> 8 -> 9 -> End
+if __name__ == "__main__":
+    main()

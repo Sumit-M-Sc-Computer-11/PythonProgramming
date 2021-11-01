@@ -1,0 +1,4 @@
+get_dummies method in 
+2 columns
+labal encoder.
+data wrangling
